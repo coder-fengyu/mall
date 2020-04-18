@@ -41,7 +41,7 @@
    },
    computed:{
      image(){
-       return this.good.image || this.good.show.img
+       return this.good.img || this.good.image || this.good.show.img
      }
    },
  }

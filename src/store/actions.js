@@ -13,15 +13,19 @@ export default{
         //     payload.count=1
         //     state.cartlist.push(payload)
         // }
-        
-        
-        let oldObj = context.state.cartlist.find(item => item.iid===payload.iid)            
-        if(oldObj){
+        return new Promise((resolve,reject)=>{
+            let oldObj = context.state.cartlist.find(item => item.iid===payload.iid)            
+            if(oldObj){
                 context.commit(ADD_COUNT,oldObj)
+                resolve('商品数量加1')
             }else{
                 payload.count=1
                 context.commit(ADD_TO_CART,payload)
+                resolve('商品添加成功')
             }
+        })
+        
+        
             // console.log(context.state.cartlist);
     }
 }

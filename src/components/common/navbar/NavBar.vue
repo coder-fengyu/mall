@@ -26,6 +26,8 @@
     line-height: 44px;
     text-align: center;
     box-shadow: 0 1px 1px rgb(100, 100,100,.1);
+    position: relative;
+    z-index: 9
 }
 .left, .right{
     width: 60px;

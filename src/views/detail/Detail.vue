@@ -136,7 +136,11 @@ import {getdetaildata,getrecom,Goods,Shop,GoodsParam} from 'network/detail'
         obj.desc = this.goods.desc;
         obj.price = this.goods.price;
         // 3.添加到Store中
-        this.$store.dispatch('addCart', obj)
+        this.$store.dispatch('addCart', obj).then(res=>{
+          // console.log(this.$toast);
+          
+          this.$toast.show(res,1500)
+        })
      }
    },
    

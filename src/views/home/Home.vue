@@ -159,8 +159,6 @@ import {getHomeMultidata,getHomeGoods} from 'network/home'
 .nav-bar{
   background-color: var(--color-tint);
   color: white;
-  position: relative;
-  z-index: 9
   /* position: fixed;
   left: 0;
   right: 0;
